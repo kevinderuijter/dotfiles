@@ -8,3 +8,5 @@
 	program = gpg
 [core]
     editor = vim
+[credential "https://github.com"]
+	helper = !gh auth git-credential

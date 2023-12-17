@@ -1,0 +1,22 @@
+blocks:
+  - git
+  - name
+  - permission
+  - user
+  - group
+  - size
+  - date
+  - links
+icons:
+  when: never
+display: almost-all
+ignore-globs:
+  - ._
+indicators: true
+layout: grid
+size: default
+dereference: true
+color:
+  when: auto
+  theme: custom
+date: date

@@ -1,0 +1,10 @@
+[user]
+	email = kevinderuijter@icloud.com
+	name = Kevin de Ruijter
+	signingkey = CC81B07F68B00CDF
+[commit]
+	gpgsign = true
+[gpg]
+	program = gpg
+[core]
+    editor = vim

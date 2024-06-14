@@ -6,9 +6,19 @@ Welcome to my dotfiles repository.
 
 - [Dotfiles](#dotfiles)
   - [Table of Contents](#table-of-contents)
+  - [Dotfiles](#dotfiles-1)
   - [YubiKey](#yubikey)
   - [GitHub](#github)
-    - [Hooks](#hooks)
+
+## Dotfiles
+
+The following dotfiles are included.
+
+- [~/.gitconfig](dotfiles/.gitconfig)
+- [~/.aliasrc](dotfiles/.aliasrc)
+- [~/.config/atuin/config.toml](dotfiles/.config/atuin/config.toml)
+- [~/.config/lscolors.sh](dotfiles/.config/lscolors.sh)
+- [~/.vimrc](dotfiles/.vimrc)
 
 ## YubiKey
 
@@ -27,8 +37,6 @@ The following solutions are executed by the script.
 - [Bashrc](dotfiles/.bashrc): specify TTY in $GPG_TTY.
 
 ## GitHub
-
-### Hooks
 
 To enforce [conventional commits](https://www.conventionalcommits.org/en/v1.0.0/) I've created a few git hooks
 that can be installed using [hooks.sh](scripts/github/hooks/hooks.sh).

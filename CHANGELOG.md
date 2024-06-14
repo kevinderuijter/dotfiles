@@ -9,8 +9,25 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - [Changelog](#changelog)
   - [Table of Contents](#table-of-contents)
-  - [\[0.0.1\] - 2024-06-14](#001---2024-06-14)
+  - [\[0.0.2\] - 2024-06-14](#002---2024-06-14)
     - [Added](#added)
+    - [Changed](#changed)
+  - [\[0.0.1\] - 2024-06-14](#001---2024-06-14)
+    - [Added](#added-1)
+
+## [0.0.2] - 2024-06-14
+
+### Added
+
+- [~/.gitconfig](dotfiles/.gitconfig)
+- [~/.aliasrc](dotfiles/.aliasrc)
+- [~/.config/atuin/config.toml](dotfiles/.config/atuin/config.toml)
+- [~/.config/lscolors.sh](dotfiles/.config/lscolors.sh)
+- [~/.vimrc](dotfiles/.vimrc)
+
+### Changed
+
+- Source [~/.config/lscolors.sh](dotfiles/.config/lscolors.sh) in [~/.bashrc](dotfiles/.bashrc)
 
 ## [0.0.1] - 2024-06-14
 

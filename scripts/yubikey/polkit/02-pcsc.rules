@@ -1,0 +1,23 @@
+polkit.addRule(function(action, subject) {
+    // Check if the action ID matches "org.debian.pcsc-lite.access_card"
+    // This action identifier refers to permissions or actions specifically 
+    // related to accessing a smart card.
+    if (action.id == "org.debian.pcsc-lite.access_card" &&
+        // Check if the subject user is allowed permission.
+        subject.user == "placeholder") {
+            // Allow the action.
+            return polkit.Result.YES;
+    }
+});
+
+polkit.addRule(function(action, subject) {
+    // Check if the action ID matches "org.debian.pcsc-lite.access_card"
+    // This action identifier refers to broader permissions or actions
+    // related to accessing the PC/SC Lite service as a whole.
+    if (action.id == "org.debian.pcsc-lite.access_pcsc" &&
+        // Check if the subject user is allowed permission.
+        subject.user == "placeholder") {
+            // Allow the action.
+            return polkit.Result.YES;
+    }
+});

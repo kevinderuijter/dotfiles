@@ -9,6 +9,7 @@ Welcome to my dotfiles repository.
   - [Dotfiles](#dotfiles-1)
   - [YubiKey](#yubikey)
   - [GitHub](#github)
+  - [Firewalla](#firewalla)
 
 ## Dotfiles
 
@@ -47,3 +48,9 @@ that can be installed using [hooks.sh](scripts/github/hooks/hooks.sh).
 - [pre-push](scripts/github/hooks/pre-push)
   - Check if the branch name conforms to naming conventions.
   - Check if the tag conforms to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
+
+## Firewalla
+
+Blocking all regions manually is too much work.  
+Therefore I've created a script that uses the Firewalla API to do this
+automatically. See the scripts [README.md](scripts/firewalla/README.md) for more information.

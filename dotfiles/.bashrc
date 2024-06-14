@@ -100,9 +100,14 @@ alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo
 # You may want to put all your additions into a separate file like
 # ~/.bash_aliases, instead of adding them here directly.
 # See /usr/share/doc/bash-doc/examples in the bash-doc package.
-
 if [ -f ~/.bash_aliases ]; then
     . ~/.bash_aliases
+fi
+
+# LS colors.
+# File specific color settings for the ls command.
+if [ -f ~/.config/lscolors.sh ]; then
+    . ~/.config/lscolors.sh
 fi
 
 # enable programmable completion features (you don't need to enable
@@ -116,5 +121,13 @@ if ! shopt -oq posix; then
   fi
 fi
 
-# Specify the TTY to ask for the YubiKey PIN.
-export GPG_TTY=$(tty)
+# Initialise GPG using the current TTY (standard input).
+# This is required to insert the GPG card's pin.
+GPG_TTY=$(tty)
+export GPG_TTY
+
+# Prevent "LC_CTYPE: cannot change locale (UTF-8)" error
+# when building i.e. python using pyenv.
+LC_ALL=en_US.UTF-8
+LANG=en_US.UTF-8
+export LC_ALL LANG

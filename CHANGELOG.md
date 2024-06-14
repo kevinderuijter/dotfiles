@@ -9,11 +9,30 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - [Changelog](#changelog)
   - [Table of Contents](#table-of-contents)
-  - [\[0.0.2\] - 2024-06-14](#002---2024-06-14)
+  - [\[0.0.3\] - 2024-06-15](#003---2024-06-15)
+    - [Fixed](#fixed)
+    - [Removed](#removed)
     - [Added](#added)
+  - [\[0.0.2\] - 2024-06-14](#002---2024-06-14)
+    - [Added](#added-1)
     - [Changed](#changed)
   - [\[0.0.1\] - 2024-06-14](#001---2024-06-14)
-    - [Added](#added-1)
+    - [Added](#added-2)
+
+## [0.0.3] - 2024-06-15
+
+### Fixed
+
+- Renamed .bash_aliases to [.aliasrc](./dotfiles/.aliasrc) in [~/.bashrc](./dotfiles/.bashrc)
+
+### Removed
+
+- Removed LS aliases in [~/.bashrc](./dotfiles/.bashrc).
+
+### Added
+
+- Added LS aliases to [~/.aliasrc](./dotfiles/.aliasrc)
+
 
 ## [0.0.2] - 2024-06-14
 

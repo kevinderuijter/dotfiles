@@ -1,0 +1,35 @@
+#!/usr/bin/env bash
+
+#
+# Author:       Kevin de Ruijter
+# Date:         2024-06-09
+# Description:  Validate commit message conventions before pushing.
+#
+
+# This script is used by the pre-commit hook
+# It will check if the commit is signed and if not, it will prevent the commit
+
+if ! git verify-commit HEAD > /dev/null 2>&1; then
+  echo "Error: Commit is not signed."
+  # Show the error message from git verify-commit by running it again.
+  git verify-commit HEAD
+  exit 1
+fi
+
+# Regular expression for the commit message
+commit_regex='^(feat|fix|docs|style|refactor|perf|test|chore)(\([a-z0-9\-]+\))?: [a-z0-9].{1,72}$'
+
+# Retrieve the commit message form the temporary commit file.
+message="$(cat $1)"
+
+# Extract the subject from the commit message.
+subject=$(echo "$message" | head -n1)
+
+# Check if the commit message matches the conventional commit format
+if [[ ! $subject =~ $commit_regex ]]; then
+    echo "ERROR: Commit message does not conform to the conventional commit format."
+    echo "Message: $subject"
+    echo "Format should be: <type>(<scope>): <subject>"
+    echo "Example: feat(auth): add login endpoint"
+    exit 1
+fi

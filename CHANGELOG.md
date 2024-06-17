@@ -9,17 +9,25 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - [Changelog](#changelog)
   - [Table of Contents](#table-of-contents)
-  - [\[0.0.4\] - 2024-06-15](#004---2024-06-15)
+  - [\[Unreleased\] - 2024-07-17](#unreleased---2024-07-17)
     - [Added](#added)
+  - [\[0.0.4\] - 2024-06-15](#004---2024-06-15)
+    - [Added](#added-1)
   - [\[0.0.3\] - 2024-06-15](#003---2024-06-15)
     - [Fixed](#fixed)
     - [Removed](#removed)
-    - [Added](#added-1)
-  - [\[0.0.2\] - 2024-06-14](#002---2024-06-14)
     - [Added](#added-2)
+  - [\[0.0.2\] - 2024-06-14](#002---2024-06-14)
+    - [Added](#added-3)
     - [Changed](#changed)
   - [\[0.0.1\] - 2024-06-14](#001---2024-06-14)
-    - [Added](#added-3)
+    - [Added](#added-4)
+
+## [Unreleased] - 2024-07-17
+
+### Added
+
+- Aliases for git and ls commands.
 
 ## [0.0.4] - 2024-06-15
 

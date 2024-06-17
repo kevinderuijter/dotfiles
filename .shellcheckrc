@@ -1,0 +1,2 @@
+# Don't follow file sources.
+disable=SC1090,SC1091

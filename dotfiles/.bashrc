@@ -105,6 +105,15 @@ if [ -f ~/.config/lscolors.sh ]; then
     . ~/.config/lscolors.sh
 fi
 
+# Git command to remove all local branches that no longer exist on remote.
+git_clean_branhces() {
+    # Fetch the latest changes from the remote to update the references.
+    # --prune removes any remote-tracking references that no longer exist on the remote.
+    git fetch --prune
+    # Remove all local branches that no longer exist on the remote.
+    git branch -vv | grep ': gone]' | awk '{print $1}' | xargs -r git branch -D
+}
+
 # enable programmable completion features (you don't need to enable
 # this, if it's already enabled in /etc/bash.bashrc and /etc/profile
 # sources /etc/bash.bashrc).
@@ -126,3 +135,12 @@ export GPG_TTY
 LC_ALL=en_US.UTF-8
 LANG=en_US.UTF-8
 export LC_ALL LANG
+
+# Install Ruby Gems to ~/gems
+export GEM_HOME="$HOME/gems"
+export PATH="$HOME/gems/bin:$PATH"
+
+# Load atuin environment.
+. "$HOME/.atuin/bin/env"
+[[ -f ~/.bash-preexec.sh ]] && source ~/.bash-preexec.sh
+eval "$(atuin init bash)"
